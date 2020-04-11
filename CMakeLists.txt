@@ -1,5 +1,8 @@
 #
-#	Boilerplate CMake configuration for a cross-platform library, 
+#	Core repository for several core libraries I reuse across
+#	multiple projects.
+#
+#	Uses boilerplate CMake configuration for a cross-platform library,
 #	including configuration for a static framework on Xcode/macOS/iOS
 #
 #	Designed by Fletcher T. Penney
@@ -15,32 +18,34 @@ cmake_minimum_required(VERSION 2.6)
 
 # Project Description
 
-set (My_Project_Title "libBoilermaker")
-set (My_Project_Description "Standardized configuration to simplify your life")
+set (My_Project_Title "libCoreUtilities")
+set (My_Project_Description "Reusable component libraries")
 set (My_Project_Author "Fletcher T. Penney")
-set (My_Project_Revised_Date "2020-03-26")
-set (My_Project_Version_Major 0)
-set (My_Project_Version_Minor 1)
+set (My_Project_Revised_Date "2020-04-11")
+set (My_Project_Version_Major 1)
+set (My_Project_Version_Minor 0)
 set (My_Project_Version_Patch 0)
 
 set (My_Project_Copyright_Date "2020")
 
-set (My_Project_Identifier "net.fletcherpenney.libboilermaker")
+set (My_Project_Identifier "net.fletcherpenney.libcoreutilities")
 
 # Source files and headers
 
 set(src_files
-	src/bar.c
-	src/foo.c
+	src/char.c
+	src/d_string.c
+	src/stack.c
 )
 
 set(public_headers
-	src/libBoilerplate.h
+	src/libCoreUtilities.h
+	src/char.h
+	src/d_string.h
+	src/stack.h
 )
 
 set(private_headers
-	src/bar.h
-	src/foo.h
 )
 
 set(resources
